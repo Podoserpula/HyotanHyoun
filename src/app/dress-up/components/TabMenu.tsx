@@ -13,7 +13,7 @@ const TabMenu: React.FC = () => {
       content: <Tab1Content />
     },
     { title: <Image src="/hyoun.png" alt="Tab 2" width={20} height={20} style={{ width: '100%', height: 'auto' }} />, content: <ShapeChanger /> },
-    { title: <Image src="/hyoun.png" alt="Tab 3" width={20} height={20} />, content: <Tab3Content /> },
+    { title: <Image src="/hyoun.png" alt="Tab 3" width={20} height={20} style={{ width: '100%', height: 'auto' }} />, content: <Tab3Content /> },
   ];
 
   return (
