@@ -13,6 +13,9 @@ export default {
         foreground: "var(--foreground)",
       },
     },
+    fontFamily: {
+      titleFnt: ["Cherry Bomb One", "sans-serif"],
+    }
   },
   plugins: [],
 } satisfies Config;
