@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 
-interface Tab1ContentProps {
+interface Tab4ContentProps {
   onShapeChange: (shapeType: string) => void; // SVGの変更を親に伝えるためのコールバック
 }
 
@@ -75,6 +75,7 @@ const TabContent = () => {
           </svg>
 
         </button>
+
 
         <button className="flex justify-center items-center p-2 bg-white-500 text-gray rounded-lg border-2 border-gray-700">
 

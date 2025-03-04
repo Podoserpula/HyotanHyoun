@@ -2,18 +2,28 @@ import React, { useState } from 'react'
 import { Tab1Content, Tab2Content, Tab3Content } from './TabContents';
 import Image from 'next/image';
 import ShapeChanger from './TabContents/Tab2Content';
+import TabContent from './TabContents/Tab4Content';
+import BackgroundColorPicker from './TabContents/BackgroundColorPicker';
+
+
 
 const TabMenu: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
 
 
+
   const tabs = [
     {
-      title: <Image src="/hyoun.png" alt="Tab 1" width={20} height={20} style={{ width: '100%', height: 'auto' }} />,
+      title: <Image src="/hyoun.png" alt="体型選択タブ" width={20} height={20} style={{ width: '100%', height: 'auto' }} />,
       content: <Tab1Content />
     },
-    { title: <Image src="/hyoun.png" alt="Tab 2" width={20} height={20} style={{ width: '100%', height: 'auto' }} />, content: <ShapeChanger /> },
+    { title: <Image src="/hyoun.png" alt="大きさ選択タブ" width={20} height={20} style={{ width: '100%', height: 'auto' }} />, content: <ShapeChanger /> },
+
     { title: <Image src="/hyoun.png" alt="Tab 3" width={20} height={20} style={{ width: '100%', height: 'auto' }} />, content: <Tab3Content /> },
+
+    { title: <Image src="/hyoun.png" alt="Tab 4" width={20} height={20} style={{ width: '100%', height: 'auto' }} />, content: <TabContent /> },
+
+    { title: <Image src="/hyoun.png" alt="背景色選択タブ" width={20} height={20} style={{ width: '100%', height: 'auto' }} />, content: <BackgroundColorPicker /> },
   ];
 
   return (
