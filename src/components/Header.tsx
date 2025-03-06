@@ -35,7 +35,7 @@ const Header: FC<HeaderProps> = ({ title }) => {
 
 
 			{/* タイトル */}
-			<h1 className="text-4xl text-center">ひょうたんひょうん</h1>
+			<h1 className="text-4xl text-center">{title}</h1>
 
 			{/* ハンバーガーメニューアイコン */}
 			<button

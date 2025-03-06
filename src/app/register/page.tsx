@@ -3,6 +3,7 @@ import Header from '@/components/Header'
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
 
+
 export default function page() {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
@@ -29,8 +30,8 @@ export default function page() {
 			<Header title="新規会員登録" />
 			<main>
 				<div className="flex justify-center min-h-screen bg-gray-100">
-					<div>
-						<h2 className="text-3xl font-bold text-center mb-4">新規会員登録</h2>
+					<div className="mt-10">
+
 
 						{/* エラーメッセージ */}
 						{errorMessage && (
