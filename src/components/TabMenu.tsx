@@ -9,6 +9,7 @@ import Preview from './Preview';
 
 
 
+
 const TabMenu: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [fillColor, setFillColor] = useState("#FFFDDD"); // 初期色
@@ -33,7 +34,8 @@ const TabMenu: React.FC = () => {
 
 
 
-
+      {/* <Preview bgColor={fillColor} onChange={setFillColor} /> */}
+      {/* <BodyType /> */}
 
       {/* タブメニュー */}
       <div className="flex border-b-2 mb-4" >
@@ -58,7 +60,7 @@ const TabMenu: React.FC = () => {
         {tabs[activeTab].content}
       </div >
 
-      <Preview bgColor={fillColor} onChange={setFillColor} />
+
     </div >
 
 

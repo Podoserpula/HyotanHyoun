@@ -2,8 +2,9 @@
 import React, { useState } from 'react';
 import Header from '@/components/Header';
 import { useRouter } from 'next/navigation';
-import TabMenu from './components/TabMenu';
-import Preview from './components/Preview';
+import TabMenu from '../../components/TabMenu';
+import Preview from '../../components/Preview';
+import ShapeType from '../../components/TabMenu';
 
 
 export default function DressUpPage() {
@@ -19,6 +20,7 @@ export default function DressUpPage() {
   // };
 
   const router = useRouter();
+
 
 
 
@@ -44,7 +46,7 @@ export default function DressUpPage() {
 
 
   return (
-    <div className="flex flex-col items-center min-h-screen"
+    <div className="flex flex-col items-center "
     >
       {/* ヘッダー */}
       <Header title="きせかえ" />
@@ -59,13 +61,15 @@ export default function DressUpPage() {
           </div>
         </div>
 
-        <div className="w-full flex flex-col items-center">
+        <div className="w-full flex flex-col items-center ">
+
         </div>
-        <Preview bgColor={fillColor} onChange={setFillColor} />
 
 
 
-        <div className=" text-center">
+
+
+        <div className="text-center mt-10">
           {/* 着せ替え完了ボタン */}
           <button
             onClick={handleCompleteClick}
@@ -101,7 +105,7 @@ export default function DressUpPage() {
           </div>
         )}
 
-        <div className="mt-10">
+        <div className="mt-5">
           {/* タブ */}
           <div className="container mx-auto p-4">
             <TabMenu />

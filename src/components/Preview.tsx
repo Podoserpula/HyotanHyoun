@@ -1,33 +1,43 @@
 import React from "react";
 import BackgroundColorPicker from "./TabContents/BackgroundColorPicker";
+import ImageSwap from "./TabContents/ShapeType";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface PreviewProps {
 	bgColor: string; // 親から渡された背景色
 	onChange: (color: string) => void; // 親コンポーネントに色を変更するための関数
 }
 
+
 const Preview: React.FC<PreviewProps> = ({ bgColor, onChange }) => {
 	return (
-		<div className="w-full flex flex-col items-center min-h-screen">
-			{/* 背景色変更 */}
-			<svg
-				className="absolute top-20"
-				xmlns="http://www.w3.org/2000/svg"
-				viewBox="0 0 100 100"
-				width="800"
-				height="800"
-				preserveAspectRatio="none"
-			>
-				<rect x="0" y="0" width="100%" height="100%" fill={bgColor} />
-			</svg>
+		<div className="flex flex-col items-center">
+
+
+
 
 			{/* Previewに関するSVG */}
 			<div className="relative flex justify-center items-center">
-				{/* 輪郭 */}
-				<div className="absolute z-10 top-20">
+
+				<div>
+					{/* 背景色変更 */}
 					<svg
-						width="500"
-						height="500"
+
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 100 100"
+						width="400"
+						height="400"
+						preserveAspectRatio="none"
+					>
+						<rect x="0" y="0" width="100%" height="100%" fill={bgColor} />
+					</svg>
+				</div>
+
+				{/* 輪郭 */}
+				<div className="absolute z-10 top-10">
+					<svg
+						width="300"
+						height="300"
 						viewBox="0 0 277 598"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
@@ -42,10 +52,10 @@ const Preview: React.FC<PreviewProps> = ({ bgColor, onChange }) => {
 				</div>
 
 				{/* 左目 */}
-				<div className="absolute z-20 top-20">
+				<div className="absolute z-20 top-10">
 					<svg
-						width="500"
-						height="500"
+						width="300"
+						height="300"
 						viewBox="0 0 277 598"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
