@@ -3,14 +3,16 @@ import React, { useState } from 'react';
 import Header from '@/components/Header';
 import { useRouter } from 'next/navigation';
 import TabMenu from '../../components/TabMenu';
-import Preview from '../../components/Preview';
-import ShapeType from '../../components/TabMenu';
+import Preview from '@/components/Preview';
+
+
+
+
 
 
 export default function DressUpPage() {
   const [isLoggedIn, setIsLoggedIn] = useState(false); // ログイン状態を管理
   const [isModalOpen, setIsModalOpen] = useState(false); // モーダルの開閉管理
-  const [fillColor, setFillColor] = useState("#FFFDDD"); // 初期色
 
 
 
@@ -61,9 +63,7 @@ export default function DressUpPage() {
           </div>
         </div>
 
-        <div className="w-full flex flex-col items-center ">
 
-        </div>
 
 
 
