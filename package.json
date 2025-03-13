@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/react-color": "^3.0.13",
     "firebase": "^11.3.1",
     "framer-motion": "^12.4.10",
     "next": "15.1.6",
     "react": "^19.0.0",
+    "react-color": "^2.19.3",
     "react-dom": "^19.0.0",
     "three": "^0.172.0"
   },

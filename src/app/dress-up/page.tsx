@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import Header from '@/components/Header';
 import { useRouter } from 'next/navigation';
-import TabMenu from '../../components/TabMenu';
-import Preview from '@/components/Preview';
+// import TabMenu from '../../components/TabMenu';
+import ImageSwap from '@/components/TabContents/ShapeType';
 
 
 
@@ -48,8 +48,8 @@ export default function DressUpPage() {
 
 
   return (
-    <div className="flex flex-col items-center "
-    >
+
+    <div className="flex flex-col items-center ">
       {/* ヘッダー */}
       <Header title="きせかえ" />
       <main>
@@ -63,7 +63,7 @@ export default function DressUpPage() {
           </div>
         </div>
 
-
+        <ImageSwap />
 
 
 
@@ -108,7 +108,7 @@ export default function DressUpPage() {
         <div className="mt-5">
           {/* タブ */}
           <div className="container mx-auto p-4">
-            <TabMenu />
+            {/* <TabMenu /> */}
           </div>
         </div>
       </main>

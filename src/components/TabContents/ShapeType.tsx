@@ -4,6 +4,8 @@ import React, { useState } from "react";
 
 
 
+
+
 const bodyShapes = [
   {
     id: 1,
@@ -17,7 +19,7 @@ const bodyShapes = [
   {
     id: 2,
     title: "くびれすぎひょうん",
-    svg: (<svg width="445" height="455" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    svg: (<svg width="445" height="445" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M156.989 133.5C156.989 122.676 159.535 115.022 163.245 109.129C166.984 103.191 172.002 98.8795 177.258 94.8609C178.308 94.058 179.376 93.2634 180.448 92.466C189.828 85.4911 199.489 78.3067 199.489 63.5C199.489 47.5774 191.862 36.2318 181.51 28.9547C171.243 21.7378 158.297 18.5 147.295 18.5C136.501 18.5 123.382 20.4013 112.881 27.0091C102.203 33.7284 94.491 45.163 94.491 63.5C94.491 72.8379 97.3536 79.4874 101.694 84.8071C105.508 89.4807 110.456 93.0955 115.201 96.5615C115.724 96.9429 116.243 97.3225 116.759 97.7016C122.064 101.603 127.063 105.529 130.785 110.967C134.46 116.335 136.989 123.334 136.989 133.5C136.989 144.001 135.417 149.208 133.071 152.188C130.742 155.146 127.316 156.386 121.908 157.977C121.555 158.081 121.196 158.185 120.83 158.292C115.732 159.78 109.423 161.622 102.356 165.801C94.7644 170.291 86.3971 177.408 77.4742 189.517C69.3796 200.502 65.5411 211.789 65.5003 222.592C65.4595 233.399 69.2206 243.546 76.0273 252.23C89.6114 269.56 115.224 281 147.295 281C181.853 281 208.865 270.896 223.403 254.204C230.703 245.824 234.811 235.82 235.083 224.773C235.355 213.749 231.807 201.863 224.103 189.665C216.386 177.448 208.103 170.416 199.957 166.096C192.257 162.013 184.782 160.419 178.466 159.072C178.145 159.003 177.827 158.935 177.513 158.868C170.811 157.432 165.927 156.199 162.54 152.977C159.284 149.881 156.989 144.47 156.989 133.5Z" fill="white" stroke="#0D0D0D" strokeWidth="5" />
     </svg>
     )
@@ -64,9 +66,9 @@ const eyesShapes = [
     title: "ノーマルひょうんアイズ",
     svg: (<svg width="445" height="445" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M117.22 83.8263C124.512 83.8263 131.232 82.575 136.222 80.4543C138.713 79.3959 140.889 78.0717 142.479 76.4737C144.08 74.8655 145.211 72.8421 145.211 70.4935C145.211 68.1448 144.08 66.1214 142.479 64.5133C140.889 62.9153 138.713 61.591 136.222 60.5327C131.232 58.4119 124.512 57.1606 117.22 57.1606C109.928 57.1606 103.208 58.4119 98.2173 60.5327C95.7269 61.591 93.5507 62.9153 91.9602 64.5133C90.3597 66.1214 89.229 68.1448 89.229 70.4935C89.229 72.8421 90.3597 74.8655 91.9602 76.4737C93.5507 78.0717 95.7269 79.3959 98.2173 80.4543C103.208 82.575 109.928 83.8263 117.22 83.8263Z" fill="white" stroke="#0D0D0D" strokeWidth="5" />
-      <ellipse cx="117.222" cy="70.6458" rx="12.3812" ry="14.342" fill="#0D0D0D" />
+
       <path d="M182.767 83.8263C190.059 83.8263 196.779 82.575 201.769 80.4543C204.26 79.3959 206.436 78.0717 208.026 76.4737C209.627 74.8655 210.757 72.8421 210.757 70.4935C210.757 68.1448 209.627 66.1214 208.026 64.5133C206.436 62.9153 204.26 61.591 201.769 60.5327C196.779 58.4119 190.059 57.1606 182.767 57.1606C175.474 57.1606 168.754 58.4119 163.764 60.5327C161.274 61.591 159.098 62.9153 157.507 64.5133C155.907 66.1214 154.776 68.1448 154.776 70.4935C154.776 72.8421 155.907 74.8655 157.507 76.4737C159.098 78.0717 161.274 79.3959 163.764 80.4543C168.754 82.575 175.474 83.8263 182.767 83.8263Z" fill="white" stroke="#0D0D0D" strokeWidth="5" />
-      <ellipse cx="182.767" cy="70.6458" rx="12.3812" ry="14.342" fill="#0D0D0D" />
+
     </svg>
 
     )
@@ -77,8 +79,7 @@ const eyesShapes = [
     svg: (<svg width="445" height="445" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="119.5" cy="76.5" r="20" fill="white" stroke="black" strokeWidth="5" />
       <circle cx="179.5" cy="76.5" r="20" fill="white" stroke="black" strokeWidth="5" />
-      <circle cx="119.5" cy="76.5" r="10" fill="black" stroke="black" strokeWidth="5" />
-      <circle cx="179.5" cy="76.5" r="10" fill="black" stroke="black" strokeWidth="5" />
+
     </svg>
     )
   },
@@ -110,21 +111,28 @@ const eyesShapes = [
   },
 ]
 
-
-const BackgroundColor = [
+const irisShapes = [
   {
     id: 1,
-    title: "red",
-    svg: (<svg width="445" height="445" xmlns="http://www.w3.org/2000/svg">
-      <rect x="10" y="10" width="80" height="80" fill="blue" />
-    </svg>)
+    title: "ノーマル虹彩",
+    svg: (<svg width="445" height="445" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+      <ellipse cx="117.222" cy="70.6458" rx="12.3812" ry="14.342" fill="#0D0D0D" />
+
+      <ellipse cx="182.767" cy="70.6458" rx="12.3812" ry="14.342" fill="#0D0D0D" />
+    </svg>),
+  },
+  {
+    id: 2,
+    title: "まん丸虹彩",
+    svg: (<svg width="445" height="445" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+
+      <circle cx="119.5" cy="76.5" r="10" fill="black" stroke="black" strokeWidth="5" />
+      <circle cx="179.5" cy="76.5" r="10" fill="black" stroke="black" strokeWidth="5" />
+    </svg>),
   }
 ]
-
-
-
-
-
 
 
 
@@ -133,7 +141,12 @@ export default function ImageSwap() {
   const [selectedShape, setSlectedShape] = useState(bodyShapes[0]);
   const [direction, setDirection] = useState(0);
   const [selectedEyes, setSlectedEyes] = useState(eyesShapes[0]);
+  const [selectedIris, setSlectedIris] = useState(irisShapes[0]);
+  const [bodyColor, setBodyColor] = useState("#FFFFFF"); //　体型の色
+  const [eyesColor, setEyesColor] = useState("#FFFFFF"); // 目型の色
+  const [irisColor, setIrisColor] = useState("#FFFFFF"); // 目型の色
   const [bgColor, setBgColor] = useState("#FFFDDD");
+
 
 
 
@@ -149,9 +162,26 @@ export default function ImageSwap() {
     setSlectedEyes(image);
   }
 
-  const handleBgColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setBgColor(event.target.value);
+  const handleIrisSelect = (image: typeof irisShapes[0], index: number) => {
+    const currentIndex = irisShapes.findIndex((img) => img.id === selectedIris.id);
+    setDirection(index > currentIndex ? 1 : -1);
+    setSlectedIris(image);
   }
+
+
+
+  const handleBodyColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setBodyColor(event.target.value); // 色を更新
+  };
+
+  const handleEyesColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setEyesColor(event.target.value);
+  }
+
+  const handleIrisColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setIrisColor(event.target.value);
+  }
+
 
   return (
     <div className="flex flex-col space-y-4">
@@ -168,9 +198,19 @@ export default function ImageSwap() {
             exit={{ opacity: 0, x: direction * -50 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            {selectedShape.svg}
+            <div style={{ marginBottom: "20px" }}>
+              {/* fillを動的に変更 */}
+              {React.cloneElement(selectedShape.svg, {
+                children: React.Children.map(selectedShape.svg.props.children, (child) =>
+                  React.cloneElement(child, {
+                    fill: bodyColor, // 直接fillを変更
+                  })
+                ),
+              })}
+            </div>
           </motion.div>
         </AnimatePresence>
+
 
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
@@ -181,38 +221,100 @@ export default function ImageSwap() {
             exit={{ opacity: 0, x: direction * -50 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            {selectedEyes.svg}
+            <div style={{ marginBottom: "20px" }}>
+              {/* fillを動的に変更 */}
+              {React.cloneElement(selectedEyes.svg, {
+                children: React.Children.map(selectedEyes.svg.props.children, (child) =>
+                  React.cloneElement(child, {
+                    fill: eyesColor, // 直接fillを変更
+                  })
+                ),
+              })}
+            </div>
           </motion.div>
         </AnimatePresence>
+
+
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            key={selectedIris.id}
+            className="absolute w-full h-full"
+            initial={{ opacity: 0, x: direction * 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: direction * -50 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            <div style={{ marginBottom: "20px" }}>
+              {/* fillを動的に変更 */}
+              {React.cloneElement(selectedIris.svg, {
+                children: React.Children.map(selectedIris.svg.props.children, (child) =>
+                  React.cloneElement(child, {
+                    fill: irisColor, // 直接fillを変更
+                  })
+                ),
+              })}
+            </div>
+          </motion.div>
+        </AnimatePresence>
+
+
+
 
       </div>
 
 
       {/* 選択 */}
-      <div className="flex justify-center items-center">
-        <div className="flex space-x-2 overflow-x-auto py-2 px-1 max-w-full">
-          {bodyShapes.map((image, index) => (
-            <button
-              key={image.id}
-              onClick={() => handleShapeSelect(image, index)}
-              className={`relative flex-shrink-0 w-16 h-16 rounded border-2 transition-all duration-200 ${selectedShape.id === image.id
-                ? "border-blue-500 scale-110 transform"
-                : "border-gray-200 hover:border-gray-300"
-                }`}
-              aria-label={`画像${image.title}を選択`}
-            >
-              <div className="flex justify-center items-center w-full h-full">
-                {image.svg}
-              </div>
-            </button>
-          ))}
+
+      <div>
+        <div>
+          <h3>ボディカラーを選んでください</h3>
+          <input
+            type="color"
+            value={bodyColor} // 現在のカラー
+            onChange={handleBodyColorChange} // 色が変更されたときに呼ばれる
+          />
+
+        </div>
+        <div className="flex justify-center items-center">
+
+          <div className="flex space-x-2 overflow-x-auto py-2 px-1 max-w-full">
+            {bodyShapes.map((image, index) => (
+              <button
+                key={image.id}
+                onClick={() => handleShapeSelect(image, index)}
+                className={`relative flex-shrink-0 w-16 h-16 rounded border-2 transition-all duration-200 ${selectedShape.id === image.id
+                  ? "border-blue-500 scale-110 transform"
+                  : "border-gray-200 hover:border-gray-300"
+                  }`}
+                aria-label={`画像${image.title}を選択`}
+              >
+
+                <div className="flex justify-center items-center w-full h-full">
+                  {image.svg}
+                </div>
+              </button>
+            ))}
+          </div>
         </div>
       </div>
+
       <div className="text-center mt-2">
         <h2 className="text-lg font-medium">{selectedShape.title}</h2>
       </div>
 
+
+
+      <div>
+        <h3>アイカラーを選んでください</h3>
+        <input
+          type="color"
+          value={eyesColor} // 現在のカラー
+          onChange={handleEyesColorChange} // 色が変更されたときに呼ばれる
+        />
+
+      </div>
       <div className="flex justify-center items-center">
+
         <div className="flex space-x-2 overflow-x-auto py-2 px-1 max-w-full">
           {eyesShapes.map((image, index) => (
             <button
@@ -234,6 +336,47 @@ export default function ImageSwap() {
 
       <div className="text-center mt-2">
         <h2 className="text-lg font-medium">{selectedEyes.title}</h2>
+
+
+
+      </div>
+
+
+      <div>
+        <h3>アイカラーを選んでください</h3>
+        <input
+          type="color"
+          value={irisColor} // 現在のカラー
+          onChange={handleIrisColorChange} // 色が変更されたときに呼ばれる
+        />
+
+      </div>
+      <div className="flex justify-center items-center">
+
+        <div className="flex space-x-2 overflow-x-auto py-2 px-1 max-w-full">
+          {irisShapes.map((image, index) => (
+            <button
+              key={image.id}
+              onClick={() => handleIrisSelect(image, index)}
+              className={`relative flex-shrink-0 w-16 h-16 rounded border-2 transition-all duration-200 ${selectedIris.id === image.id
+                ? "border-blue-500 scale-110 transform"
+                : "border-gray-200 hover:border-gray-300"
+                }`}
+              aria-label={`画像${image.title}を選択`}
+            >
+              <div className="flex justify-center items-center w-full h-full">
+                {image.svg}
+              </div>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="text-center mt-2">
+        <h2 className="text-lg font-medium">{selectedIris.title}</h2>
+
+
+
       </div>
 
     </div>
