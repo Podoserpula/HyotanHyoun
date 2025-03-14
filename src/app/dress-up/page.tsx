@@ -52,7 +52,7 @@ export default function DressUpPage() {
     <div className="flex flex-col items-center ">
       {/* ヘッダー */}
       <Header title="きせかえ" />
-      <main>
+      <main className="w-full max-w-screen-md">
         <div className="relative">
           <div className="absolute z-40  top-5">
             {/* 画面説明のアイコン */}

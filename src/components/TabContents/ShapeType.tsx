@@ -5,13 +5,13 @@ import React, { useState } from "react";
 
 
 
-
+// 体型
 const bodyShapes = [
   {
     id: 1,
     title: "ノーマルひょうん",
-    svg: (<svg width="445" height="445" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M147.147 283.346C176.414 283.346 197.16 278.868 211.223 271.349C225.389 263.774 232.73 253.125 235.036 241.15C237.319 229.3 234.618 216.454 229.354 204.402C224.079 192.326 216.14 180.837 207.634 171.588C199.615 162.869 196.148 154.467 195.315 146.253C194.475 137.97 196.289 129.657 199.223 121.089C200.689 116.81 202.416 112.516 204.205 108.153C204.461 107.528 204.719 106.902 204.977 106.274C206.513 102.537 208.072 98.7464 209.491 94.941C212.806 86.0554 215.465 76.8414 215.465 67.337C215.465 48.4465 208.019 35.7671 195.453 27.9613C183.097 20.286 166.077 17.5 147.147 17.5C127.839 17.5 111.375 20.7943 99.6736 28.7592C87.8021 36.8402 81.1625 49.5029 81.1625 67.337C81.1625 76.3627 83.7599 85.0041 86.9653 93.3716C88.2397 96.6983 89.5843 99.9263 90.9177 103.127C93.0147 108.162 95.0841 113.13 96.8091 118.311C99.5788 126.63 101.249 134.97 100.275 143.681C99.3053 152.357 95.6888 161.61 87.5429 171.711C70.554 192.777 58.972 220.508 65.2082 243.352C68.3611 254.902 76.0223 264.977 89.3796 272.106C102.664 279.196 121.518 283.346 147.147 283.346Z" fill="white" stroke="#0D0D0D" strokeWidth="5" />
+    svg: (<svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M147.803 243.092C168.269 243.092 182.745 239.96 192.539 234.724C202.393 229.454 207.481 222.061 209.08 213.758C210.665 205.53 208.792 196.591 205.119 188.182C201.439 179.757 195.898 171.738 189.96 165.281C184.318 159.147 181.932 153.225 181.434 147.425C180.932 141.581 182.335 135.723 184.521 129.707C185.613 126.704 186.888 123.691 188.201 120.635C188.352 120.284 188.503 119.932 188.655 119.579C189.818 116.877 190.996 114.14 192.065 111.39C194.479 105.177 196.397 98.7541 196.397 92.1359C196.397 78.9586 190.94 70.174 181.979 64.7746C173.142 59.4504 161.04 57.5 147.803 57.5C134.308 57.5 122.842 59.8038 114.712 65.3381C106.48 70.942 101.864 79.7231 101.864 92.1359C101.864 98.4075 103.669 104.422 105.909 110.271C106.795 112.584 107.734 114.839 108.667 117.078C110.138 120.611 111.594 124.106 112.804 127.738C114.748 133.58 115.928 139.457 115.241 145.604C114.556 151.731 112.002 158.252 106.275 165.355C94.4006 180.079 86.3533 199.406 90.6869 215.281C92.8746 223.295 98.1897 230.293 107.483 235.254C116.733 240.19 129.886 243.092 147.803 243.092Z" fill="#FAFAFA" stroke="#222222" strokeWidth="3" />
     </svg>
 
     )
@@ -19,118 +19,130 @@ const bodyShapes = [
   {
     id: 2,
     title: "くびれすぎひょうん",
-    svg: (<svg width="445" height="445" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M156.989 133.5C156.989 122.676 159.535 115.022 163.245 109.129C166.984 103.191 172.002 98.8795 177.258 94.8609C178.308 94.058 179.376 93.2634 180.448 92.466C189.828 85.4911 199.489 78.3067 199.489 63.5C199.489 47.5774 191.862 36.2318 181.51 28.9547C171.243 21.7378 158.297 18.5 147.295 18.5C136.501 18.5 123.382 20.4013 112.881 27.0091C102.203 33.7284 94.491 45.163 94.491 63.5C94.491 72.8379 97.3536 79.4874 101.694 84.8071C105.508 89.4807 110.456 93.0955 115.201 96.5615C115.724 96.9429 116.243 97.3225 116.759 97.7016C122.064 101.603 127.063 105.529 130.785 110.967C134.46 116.335 136.989 123.334 136.989 133.5C136.989 144.001 135.417 149.208 133.071 152.188C130.742 155.146 127.316 156.386 121.908 157.977C121.555 158.081 121.196 158.185 120.83 158.292C115.732 159.78 109.423 161.622 102.356 165.801C94.7644 170.291 86.3971 177.408 77.4742 189.517C69.3796 200.502 65.5411 211.789 65.5003 222.592C65.4595 233.399 69.2206 243.546 76.0273 252.23C89.6114 269.56 115.224 281 147.295 281C181.853 281 208.865 270.896 223.403 254.204C230.703 245.824 234.811 235.82 235.083 224.773C235.355 213.749 231.807 201.863 224.103 189.665C216.386 177.448 208.103 170.416 199.957 166.096C192.257 162.013 184.782 160.419 178.466 159.072C178.145 159.003 177.827 158.935 177.513 158.868C170.811 157.432 165.927 156.199 162.54 152.977C159.284 149.881 156.989 144.47 156.989 133.5Z" fill="white" stroke="#0D0D0D" strokeWidth="5" />
+    svg: (<svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M146.071 241.5C119.346 241.5 100.457 233.548 90.2408 221.665C79.9653 209.713 78.6859 194.029 86.7424 179.281C94.8261 164.483 108.978 159.08 120.616 154.78C120.814 154.707 121.012 154.634 121.208 154.562C126.868 152.472 131.785 150.657 135.359 148.181C138.941 145.7 141.036 142.652 141.036 138C141.036 133.318 138.842 129.825 135.308 126.77C131.969 123.883 127.571 121.504 122.908 118.981C122.551 118.787 122.192 118.593 121.832 118.398C116.857 115.7 111.676 112.794 107.757 108.966C103.781 105.083 101.059 100.209 101.059 93.6359C101.059 80.9382 106.626 72.0654 115.126 66.4312C123.548 60.8487 134.751 58.5 146.071 58.5C158.345 58.5 171.511 59.6866 181.649 64.6465C186.746 67.1402 191.121 70.6074 194.214 75.3885C197.31 80.1741 199.059 86.1775 199.059 93.6359C199.059 101.294 196.172 106.716 191.852 110.81C187.601 114.839 181.99 117.555 176.605 119.95C175.794 120.31 174.991 120.663 174.197 121.011C169.613 123.023 165.355 124.891 162.046 127.274C158.257 130.003 155.931 133.255 155.931 138C155.931 140.493 156.402 142.435 157.213 144.015C158.023 145.594 159.215 146.894 160.776 148.041C163.897 150.332 168.299 151.895 173.711 153.815C173.847 153.864 173.984 153.912 174.122 153.961C185.195 157.892 199.481 163.139 211.266 179.109C217.19 187.137 219.534 195.152 218.698 202.689C217.863 210.218 213.879 217.061 207.545 222.799C194.916 234.242 172.751 241.5 146.071 241.5Z" fill="#FAFAFA" stroke="#222222" strokeWidth="3" />
     </svg>
+
     )
   },
   {
     id: 3,
     title: "まくらひょうん",
-    svg: (<svg width="445" height="445" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M153.841 287.5C170.652 287.5 183.307 283.876 192.765 277.538C202.236 271.192 208.273 262.277 212.112 252.113C219.013 233.838 218.93 211.068 218.856 191C218.849 188.97 218.841 186.967 218.841 185V72.5C218.841 53.6291 211.007 38.5411 198.24 28.2221C185.526 17.945 168.06 12.5 148.841 12.5C129.246 12.5 112.415 18.4258 100.446 28.9483C88.4509 39.4944 81.5019 54.5225 81.5019 72.337C81.5019 82.5323 81.5019 91.7677 81.502 101.162C81.5021 123.325 81.5023 146.373 81.5017 185C81.5017 185.983 81.5013 186.963 81.5008 187.941C81.4951 200.602 81.4896 212.82 82.4177 224.034C83.4176 236.116 85.5133 247.239 89.9819 256.693C94.4809 266.212 101.361 273.983 111.772 279.333C122.126 284.653 135.816 287.5 153.841 287.5Z" fill="white" stroke="#0D0D0D" strokeWidth="5" />
+    svg: (<svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M152.744 246C164.476 246 173.283 243.471 179.852 239.069C186.429 234.662 190.627 228.469 193.3 221.391C198.113 208.644 198.056 192.754 198.005 178.696C197.999 177.277 197.994 175.877 197.994 174.5V95.75C197.994 82.6163 192.545 72.126 183.667 64.9499C174.82 57.7989 162.653 54 149.244 54C135.577 54 123.858 58.1327 115.533 65.4516C107.192 72.7845 102.357 83.2348 102.357 95.6359C102.357 102.773 102.357 109.237 102.357 115.813C102.357 131.327 102.357 147.461 102.357 174.5C102.357 175.187 102.356 175.873 102.356 176.556C102.352 185.422 102.348 193.964 102.997 201.803C103.696 210.248 105.159 218 108.269 224.578C111.397 231.196 116.175 236.593 123.41 240.311C130.611 244.011 140.15 246 152.744 246Z" fill="#FAFAFA" stroke="#222222" strokeWidth="3" />
     </svg>
+
     )
   },
   {
     id: 4,
     title: "砂時計ひょうん",
-    svg: (<svg width="445" height="445" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M147.332 272.5C187.096 272.5 211.853 268.116 225.898 260.638C232.99 256.862 237.533 252.2 239.76 246.753C241.985 241.312 241.753 235.447 239.995 229.543C236.52 217.878 226.852 205.305 216.285 193.599C210.961 187.701 205.327 181.939 200.005 176.538C199.366 175.891 198.733 175.248 198.105 174.612C193.481 169.925 189.166 165.552 185.524 161.592C177.759 153.15 176.276 144.572 178.284 135.87C180.341 126.953 186.096 117.801 193.146 108.613C196.651 104.046 200.419 99.539 204.137 95.0927L204.142 95.0877L204.143 95.0856C207.848 90.6556 211.509 86.2775 214.729 82.038C217.947 77.8017 220.787 73.6254 222.828 69.5779C224.863 65.5417 226.184 61.4781 226.184 57.5004C226.184 49.9665 223.536 44.1331 218.825 39.7681C214.205 35.4874 207.771 32.7732 200.417 31.0069C185.815 27.4999 166.492 27.5 147.578 27.5L147.332 27.5H147.331L147.057 27.5C128.168 27.4999 109.511 27.4998 95.5721 31.0133C88.5376 32.7865 82.4294 35.5153 78.064 39.8218C73.6211 44.2047 71.1839 50.0244 71.1839 57.5001C71.1839 65.2864 75.982 73.3323 81.873 81.2604C84.6317 84.9729 87.7346 88.7889 90.8776 92.6542C91.1452 92.9833 91.4131 93.3128 91.6811 93.6426C95.1123 97.8648 98.5739 102.156 101.768 106.546C108.183 115.361 113.329 124.324 114.934 133.471C116.51 142.457 114.706 151.835 106.738 161.715C103.731 165.444 100.393 169.414 96.9308 173.533C90.8669 180.747 84.4195 188.417 78.6937 196.042C69.7011 208.018 62.0119 220.469 60.0101 231.84C58.9958 237.601 59.4177 243.21 61.9752 248.34C64.5302 253.466 69.0848 257.848 75.8584 261.401C89.2899 268.446 111.969 272.5 147.332 272.5Z" fill="white" stroke="#0D0D0D" strokeWidth="5" />
+    svg: (<svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M148.263 235.5C176.093 235.5 193.369 232.43 203.142 227.226C208.07 224.602 211.2 221.377 212.731 217.633C214.261 213.892 214.107 209.847 212.887 205.751C210.473 197.645 203.742 188.881 196.344 180.687C192.622 176.563 188.682 172.533 184.956 168.752C184.509 168.299 184.065 167.849 183.625 167.403C180.389 164.123 177.366 161.059 174.814 158.284C169.32 152.311 168.263 146.221 169.686 140.053C171.138 133.755 175.196 127.313 180.135 120.877C182.591 117.676 185.232 114.518 187.833 111.407L187.838 111.401C190.432 108.299 192.991 105.238 195.242 102.275C197.491 99.3151 199.468 96.4056 200.887 93.592C202.302 90.7852 203.21 87.9807 203.21 85.2503C203.21 80.0424 201.382 76.0268 198.138 73.0211C194.949 70.0659 190.492 68.1796 185.364 66.9479C175.172 64.5 161.669 64.5 148.411 64.5L148.263 64.5H148.263L148.097 64.5C134.855 64.4999 121.819 64.4999 112.092 66.9517C107.19 68.1875 102.962 70.0826 99.9511 73.0532C96.8934 76.0697 95.2095 80.0771 95.2095 85.2501C95.2095 90.6094 98.5172 96.1813 102.643 101.733C104.57 104.327 106.739 106.994 108.94 109.701C109.127 109.931 109.314 110.161 109.502 110.392C111.903 113.348 114.33 116.356 116.57 119.435C121.067 125.614 124.697 131.926 125.831 138.386C126.947 144.75 125.663 151.388 120.042 158.358C117.93 160.976 115.591 163.759 113.166 166.644C108.925 171.689 104.421 177.046 100.416 182.38C94.1227 190.761 88.7741 199.435 87.384 207.331C86.681 211.325 86.9762 215.194 88.7371 218.727C90.4966 222.256 93.6403 225.29 98.3478 227.76C107.693 232.661 123.517 235.5 148.263 235.5Z" fill="#FAFAFA" stroke="#222222" strokeWidth="3" />
     </svg>
+
     )
   },
   {
     id: 5,
     title: "達磨ひょうん",
-    svg: (<svg width="445" height="445" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M147.098 284.5C202.065 284.5 236.51 265.542 252.596 239.566C268.674 213.604 265.993 181.27 248 155.566C230.583 130.685 223.28 114.734 220.26 102.026C217.927 92.2138 218.113 84.309 218.323 75.3268C218.387 72.6218 218.453 69.819 218.453 66.837C218.453 53.2027 210.005 40.0797 197.095 30.4765C184.138 20.8386 166.4 14.5 147.098 14.5C127.384 14.5 110.893 21.6003 99.3112 31.6542C87.7818 41.6623 80.9515 54.7622 80.9515 66.837C80.9515 68.3679 80.9627 69.8575 80.9736 71.3207C81.0434 80.6496 81.1052 88.9076 78.2195 99.9768C74.8726 112.815 67.5179 129.527 51.3264 155.684C34.6712 182.59 32.5156 214.851 47.8501 240.471C63.2125 266.139 95.727 284.5 147.098 284.5Z" fill="white" stroke="#0D0D0D" strokeWidth="5" />
+    svg: (<svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M148.076 243.75C186.5 243.75 210.513 230.5 221.713 212.415C232.907 194.337 231.049 171.812 218.503 153.89C206.303 136.461 201.171 125.265 199.046 116.326C197.406 109.423 197.537 103.85 197.684 97.5556C197.729 95.666 197.775 93.7112 197.775 91.6359C197.775 82.1972 191.923 73.0775 182.925 66.3841C173.899 59.67 161.535 55.25 148.076 55.25C134.338 55.25 122.853 60.1977 114.79 67.1967C106.758 74.1683 102.024 83.2742 102.024 91.6359C102.024 92.7052 102.032 93.7464 102.04 94.77C102.089 101.301 102.132 107.115 100.103 114.897C97.7516 123.918 92.5888 135.641 81.249 153.961C69.6309 172.729 68.1392 195.211 78.8175 213.052C89.5125 230.921 112.175 243.75 148.076 243.75Z" fill="#FAFAFA" stroke="#222222" strokeWidth="3" />
     </svg>
+
     )
   },
   {
     id: 6,
     title: "スリムひょうん",
-    svg: (<svg width="445" height="445" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M150.983 283.35C169.363 283.35 182.559 278.793 191.53 271.039C200.508 263.279 204.936 252.593 206.32 240.976C209.071 217.889 199.908 190.447 189.438 172.047C179.554 154.676 180.542 137.978 184.183 120.798C185.239 115.814 186.474 110.961 187.728 106.039C188.678 102.306 189.639 98.5326 190.539 94.6305C192.585 85.7657 194.201 76.6719 194.201 67.3378C194.201 48.8644 189.742 36.2725 181.823 28.3209C173.899 20.3649 162.957 17.5 150.983 17.5C138.713 17.5 128.117 20.9097 120.633 29.1446C113.19 37.3348 109.208 49.8813 109.208 67.3378C109.208 76.1876 110.784 84.7054 112.763 93.0549C113.541 96.3368 114.368 99.5491 115.192 102.746C116.495 107.806 117.789 112.828 118.86 118.027C122.294 134.702 123.136 152.002 113.075 172.167C102.544 193.275 95.5361 220.721 99.3179 243.114C101.218 254.366 105.874 264.494 114.34 271.797C122.815 279.109 134.83 283.35 150.983 283.35Z" fill="white" stroke="black" strokeWidth="5" />
+    svg: (<svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M150.768 243.222C163.594 243.222 172.766 240.043 178.987 234.666C185.213 229.285 188.292 221.869 189.256 213.781C191.173 197.694 184.784 178.539 177.469 165.684C170.506 153.446 171.21 141.684 173.763 129.635C174.503 126.145 175.37 122.736 176.25 119.283C176.915 116.669 177.587 114.03 178.214 111.313C179.645 105.114 180.771 98.7699 180.771 92.2639C180.771 79.3687 177.658 70.6301 172.179 65.1285C166.697 59.6242 159.113 57.6274 150.768 57.6274C142.224 57.6274 134.885 60.0005 129.708 65.6968C124.556 71.3663 121.775 80.0776 121.775 92.2639C121.775 98.43 122.874 104.37 124.257 110.208C124.799 112.495 125.377 114.74 125.954 116.977C126.868 120.525 127.776 124.053 128.527 127.696C130.937 139.4 131.532 151.573 124.456 165.756C117.098 180.505 112.214 199.662 114.849 215.265C116.172 223.101 119.41 230.131 125.281 235.196C131.158 240.266 139.505 243.222 150.768 243.222Z" fill="#FAFAFA" stroke="#222222" strokeWidth="3" />
     </svg>
+
     )
   },
 
 ]
 
-
-const eyesShapes = [
+// 左目の形
+const leftEyeShapes = [
   {
     id: 1,
     title: "ノーマルひょうんアイズ",
-    svg: (<svg width="445" height="445" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M117.22 83.8263C124.512 83.8263 131.232 82.575 136.222 80.4543C138.713 79.3959 140.889 78.0717 142.479 76.4737C144.08 74.8655 145.211 72.8421 145.211 70.4935C145.211 68.1448 144.08 66.1214 142.479 64.5133C140.889 62.9153 138.713 61.591 136.222 60.5327C131.232 58.4119 124.512 57.1606 117.22 57.1606C109.928 57.1606 103.208 58.4119 98.2173 60.5327C95.7269 61.591 93.5507 62.9153 91.9602 64.5133C90.3597 66.1214 89.229 68.1448 89.229 70.4935C89.229 72.8421 90.3597 74.8655 91.9602 76.4737C93.5507 78.0717 95.7269 79.3959 98.2173 80.4543C103.208 82.575 109.928 83.8263 117.22 83.8263Z" fill="white" stroke="#0D0D0D" strokeWidth="5" />
-
-      <path d="M182.767 83.8263C190.059 83.8263 196.779 82.575 201.769 80.4543C204.26 79.3959 206.436 78.0717 208.026 76.4737C209.627 74.8655 210.757 72.8421 210.757 70.4935C210.757 68.1448 209.627 66.1214 208.026 64.5133C206.436 62.9153 204.26 61.591 201.769 60.5327C196.779 58.4119 190.059 57.1606 182.767 57.1606C175.474 57.1606 168.754 58.4119 163.764 60.5327C161.274 61.591 159.098 62.9153 157.507 64.5133C155.907 66.1214 154.776 68.1448 154.776 70.4935C154.776 72.8421 155.907 74.8655 157.507 76.4737C159.098 78.0717 161.274 79.3959 163.764 80.4543C168.754 82.575 175.474 83.8263 182.767 83.8263Z" fill="white" stroke="#0D0D0D" strokeWidth="5" />
-
-    </svg>
-
+    svg: (<svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      < path d="M126.844 102.016C131.923 102.016 136.592 101.144 140.047 99.6753C141.772 98.9423 143.265 98.031 144.348 96.9426C145.437 95.8481 146.187 94.4916 146.187 92.9328C146.187 91.3741 145.437 90.0175 144.348 88.923C143.265 87.8346 141.772 86.9234 140.047 86.1903C136.592 84.7219 131.923 83.8499 126.844 83.8499C121.764 83.8499 117.095 84.7219 113.64 86.1903C111.915 86.9234 110.422 87.8346 109.339 88.923C108.25 90.0175 107.5 91.3741 107.5 92.9328C107.5 94.4916 108.25 95.8481 109.339 96.9426C110.422 98.031 111.915 98.9423 113.64 99.6753C117.095 101.144 121.764 102.016 126.844 102.016Z" fill="#FAFAFA" stroke="#222222" strokeWidth="3" />
+    </svg >
     )
   },
   {
     id: 2,
     title: "まん丸ひょうんアイズ",
-    svg: (<svg width="445" height="445" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="119.5" cy="76.5" r="20" fill="white" stroke="black" strokeWidth="5" />
-      <circle cx="179.5" cy="76.5" r="20" fill="white" stroke="black" strokeWidth="5" />
-
+    svg: (<svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="127" cy="93" r="13.5" fill="#FAFAFA" stroke="#222222" strokeWidth="3" />
     </svg>
     )
   },
   {
     id: 3,
-    title: "かまぼこひょうんアイズ",
-    svg: (<svg width="445" height="445" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M145 81C128.958 47.6668 106.042 47.6668 90 80.9994L117.5 80.9997L145 81Z" fill="white" />
-      <path d="M90 80.9994L87.7473 79.9153C87.3745 80.69 87.4259 81.6019 87.8834 82.3298C88.3408 83.0577 89.1402 83.4994 90 83.4994L90 80.9994ZM145 81L145 83.5C145.86 83.5 146.659 83.0583 147.117 82.3304C147.574 81.6025 147.626 80.6906 147.253 79.9159L145 81ZM117.5 80.9997L117.5 83.4997L117.5 83.4997L117.5 80.9997ZM92.2527 82.0836C100.183 65.6058 109.294 58.4999 117.5 58.5C125.706 58.5001 134.817 65.6061 142.747 82.0841L147.253 79.9159C139.141 63.0607 128.773 53.5001 117.5 53.5C106.227 53.4999 95.8589 63.0604 87.7473 79.9153L92.2527 82.0836ZM145 78.5L117.5 78.4997L117.5 83.4997L145 83.5L145 78.5ZM117.5 78.4997L90 78.4994L90 83.4994L117.5 83.4997L117.5 78.4997Z" fill="black" />
-      <path d="M210 81C193.958 47.6668 171.042 47.6668 155 80.9994L182.5 80.9997L210 81Z" fill="white" />
-      <path d="M155 80.9994L152.747 79.9153C152.374 80.69 152.426 81.6019 152.883 82.3298C153.341 83.0577 154.14 83.4994 155 83.4994L155 80.9994ZM210 81L210 83.5C210.86 83.5 211.659 83.0583 212.117 82.3304C212.574 81.6025 212.626 80.6906 212.253 79.9159L210 81ZM182.5 80.9997L182.5 83.4997L182.5 83.4997L182.5 80.9997ZM157.253 82.0836C165.183 65.6058 174.294 58.4999 182.5 58.5C190.706 58.5001 199.817 65.6061 207.747 82.0841L212.253 79.9159C204.141 63.0607 193.773 53.5001 182.5 53.5C171.227 53.4999 160.859 63.0604 152.747 79.9153L157.253 82.0836ZM210 78.5L182.5 78.4997L182.5 83.4997L210 83.5L210 78.5ZM182.5 78.4997L155 78.4994L155 83.4994L182.5 83.4997L182.5 78.4997Z" fill="black" />
-      <circle cx="117.5" cy="68.5" r="10" fill="black" stroke="black" strokeWidth="5" />
-      <circle cx="182.5" cy="68.5" r="10" fill="black" stroke="black" strokeWidth="5" />
+    title: "つりひょうんアイズ",
+    svg: (<svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M111 79.3979C137.998 79.0568 141.033 95.0124 142.767 100.322C129.503 105.87 112.791 107.79 111 79.3979Z" fill="#FAFAFA" stroke="#222222" strokeWidth="3" />
     </svg>
+    )
+  },
+]
+// 右目の形
+const rightEyeShapes = [
+  {
+    id: 1,
+    title: "ノーマルひょうんアイズ",
+    svg: (<svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M172.726 102.016C177.806 102.016 182.475 101.144 185.93 99.6751C187.655 98.942 189.148 98.0308 190.231 96.9424C191.32 95.8479 192.07 94.4914 192.07 92.9326C192.07 91.3738 191.32 90.0173 190.231 88.9228C189.148 87.8344 187.655 86.9231 185.93 86.1901C182.475 84.7216 177.806 83.8496 172.726 83.8496C167.647 83.8496 162.978 84.7216 159.522 86.1901C157.797 86.9231 156.305 87.8344 155.222 88.9228C154.133 90.0173 153.383 91.3738 153.383 92.9326C153.383 94.4914 154.133 95.8479 155.222 96.9424C156.305 98.0308 157.797 98.942 159.522 99.6751C162.978 101.144 167.647 102.016 172.726 102.016Z" fill="#FAFAFA" stroke="#222222" strokeWidth="3" />
+    </svg >
+    )
+  },
+  {
+    id: 2,
+    title: "まん丸ひょうんアイズ",
+    svg: (<svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="173" cy="93" r="13.5" fill="#FAFAFA" stroke="#222222" strokeWidth="3" />
+    </svg>
+
 
     )
   },
   {
-    id: 4,
+    id: 3,
     title: "つりひょうんアイズ",
-    svg: (<svg width="445" height="445" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M92 58.5688C130.568 58.0814 134.904 80.8752 137.381 88.4601C118.432 96.3854 94.5582 99.1282 92 58.5688Z" fill="white" stroke="black" strokeWidth="5" />
-      <path d="M207.439 58.5688C168.871 58.0814 164.535 80.8752 162.058 88.4601C181.007 96.3854 204.881 99.1282 207.439 58.5688Z" fill="white" stroke="black" strokeWidth="5" />
-      <path d="M109.72 78.2832C109.72 74.5658 110.729 71.3134 112.229 69.0634C113.74 66.7958 115.554 65.7832 117.22 65.7832C118.885 65.7832 120.699 66.7958 122.211 69.0634C123.711 71.3134 124.72 74.5658 124.72 78.2832C124.72 82.0006 123.711 85.253 122.211 87.5031C120.699 89.7706 118.885 90.7832 117.22 90.7832C115.554 90.7832 113.74 89.7706 112.229 87.5031C110.729 85.253 109.72 82.0006 109.72 78.2832Z" fill="black" stroke="black" strokeWidth="5" />
-      <path d="M189.72 78.2832C189.72 74.5658 188.711 71.3134 187.211 69.0634C185.699 66.7958 183.885 65.7832 182.22 65.7832C180.554 65.7832 178.74 66.7958 177.229 69.0634C175.729 71.3134 174.72 74.5658 174.72 78.2832C174.72 82.0006 175.729 85.253 177.229 87.5031C178.74 89.7706 180.554 90.7832 182.22 90.7832C183.885 90.7832 185.699 89.7706 187.211 87.5031C188.711 85.253 189.72 82.0006 189.72 78.2832Z" fill="black" stroke="black" strokeWidth="5" />
+    svg: (<svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M188.808 79.3982C161.81 79.057 158.775 95.0127 157.041 100.322C170.305 105.87 187.017 107.79 188.808 79.3982Z" fill="#FAFAFA" stroke="#222222" strokeWidth="3" />
     </svg>
-
     )
   },
 ]
 
-const irisShapes = [
+
+
+// 左の虹彩の形
+const leftIrisShapes = [
   {
     id: 1,
     title: "ノーマル虹彩",
-    svg: (<svg width="445" height="445" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-      <ellipse cx="117.222" cy="70.6458" rx="12.3812" ry="14.342" fill="#0D0D0D" />
-
-      <ellipse cx="182.767" cy="70.6458" rx="12.3812" ry="14.342" fill="#0D0D0D" />
-    </svg>),
-  },
+    svg: (<svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="127" cy="93" r="6.5" fill="#222222" stroke="#222222" strokeWidth="3" />
+    </svg>
+    ),
+  }
+]
+// 右の虹彩の形
+const rightIrisShapes = [
   {
-    id: 2,
-    title: "まん丸虹彩",
-    svg: (<svg width="445" height="445" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-
-      <circle cx="119.5" cy="76.5" r="10" fill="black" stroke="black" strokeWidth="5" />
-      <circle cx="179.5" cy="76.5" r="10" fill="black" stroke="black" strokeWidth="5" />
-    </svg>),
+    id: 1,
+    title: "ノーマル虹彩",
+    svg: (<svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="173" cy="93" r="6.5" fill="#222222" stroke="#222222" strokeWidth="3" />
+    </svg>
+    ),
   }
 ]
 
@@ -140,12 +152,30 @@ const irisShapes = [
 export default function ImageSwap() {
   const [selectedShape, setSlectedShape] = useState(bodyShapes[0]);
   const [direction, setDirection] = useState(0);
-  const [selectedEyes, setSlectedEyes] = useState(eyesShapes[0]);
-  const [selectedIris, setSlectedIris] = useState(irisShapes[0]);
-  const [bodyColor, setBodyColor] = useState("#FFFFFF"); //　体型の色
-  const [eyesColor, setEyesColor] = useState("#FFFFFF"); // 目型の色
-  const [irisColor, setIrisColor] = useState("#FFFFFF"); // 目型の色
-  const [bgColor, setBgColor] = useState("#FFFDDD");
+
+
+
+  const [selectedLeftEye, setSlectedLeftEye] = useState(leftEyeShapes[0]);
+  const [selectedRightEye, setSlectedRightEye] = useState(rightEyeShapes[0]);
+
+
+  const [selectedLeftIris, setSlectedLeftIris] = useState(leftIrisShapes[0]);
+  const [selectedRightIris, setSlectedRightIris] = useState(rightIrisShapes[0]);
+
+
+
+  const [bodyColor, setBodyColor] = useState("#FAFAFA"); //　体型の色
+
+
+
+  const [leftEyeColor, setLeftEyeColor] = useState("#FAFAFA"); // 白目部分の色
+  const [rightEyeColor, setRightEyeColor] = useState("#FAFAFA"); // 白目部分の色
+
+
+
+  const [leftIrisColor, setLeftIrisColor] = useState("#222222"); // 目の色
+  const [rightIrisColor, setRightIrisColor] = useState("#222222"); // 目の色
+
 
 
 
@@ -156,16 +186,36 @@ export default function ImageSwap() {
     setSlectedShape(image);
   };
 
-  const handleEyesSelect = (image: typeof eyesShapes[0], index: number) => {
-    const currentIndex = eyesShapes.findIndex((img) => img.id === selectedEyes.id);
+
+
+
+
+  const handleLeftEyeSelect = (image: typeof leftEyeShapes[0], index: number) => {
+    const currentIndex = leftEyeShapes.findIndex((img) => img.id === selectedLeftEye.id);
     setDirection(index > currentIndex ? 1 : -1);
-    setSlectedEyes(image);
+    setSlectedLeftEye(image);
   }
 
-  const handleIrisSelect = (image: typeof irisShapes[0], index: number) => {
-    const currentIndex = irisShapes.findIndex((img) => img.id === selectedIris.id);
+  const handleRightEyeSelect = (image: typeof rightEyeShapes[0], index: number) => {
+    const currentIndex = rightEyeShapes.findIndex((img) => img.id === selectedRightEye.id);
     setDirection(index > currentIndex ? 1 : -1);
-    setSlectedIris(image);
+    setSlectedRightEye(image);
+  }
+
+
+
+
+
+  const handleLeftIrisSelect = (image: typeof leftIrisShapes[0], index: number) => {
+    const currentIndex = leftIrisShapes.findIndex((img) => img.id === selectedLeftIris.id);
+    setDirection(index > currentIndex ? 1 : -1);
+    setSlectedLeftIris(image);
+  }
+
+  const handleRightIrisSelect = (image: typeof rightIrisShapes[0], index: number) => {
+    const currentIndex = rightIrisShapes.findIndex((img) => img.id === selectedRightIris.id);
+    setDirection(index > currentIndex ? 1 : -1);
+    setSlectedRightIris(image);
   }
 
 
@@ -174,21 +224,30 @@ export default function ImageSwap() {
     setBodyColor(event.target.value); // 色を更新
   };
 
-  const handleEyesColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setEyesColor(event.target.value);
+  const handleLeftEyeColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setLeftEyeColor(event.target.value);
+  }
+  const handleRightEyeColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setRightEyeColor(event.target.value);
   }
 
-  const handleIrisColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setIrisColor(event.target.value);
+
+
+  const handleLeftIrisColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setLeftIrisColor(event.target.value);
+  }
+  const handleRightIrisColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setRightIrisColor(event.target.value);
   }
 
 
   return (
+
     <div className="flex flex-col space-y-4">
 
       {/* プレビュー */}
 
-      <div className="relative w-full aspect-square bg-white rounded-lg border border-gray-200 overflow-hidden">
+      <div className="relative w-full aspect-square bg-white rounded-lg border border-gray-200 overflow-hidden ">
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={selectedShape.id}
@@ -198,12 +257,11 @@ export default function ImageSwap() {
             exit={{ opacity: 0, x: direction * -50 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <div style={{ marginBottom: "20px" }}>
-              {/* fillを動的に変更 */}
+            <div >
               {React.cloneElement(selectedShape.svg, {
                 children: React.Children.map(selectedShape.svg.props.children, (child) =>
                   React.cloneElement(child, {
-                    fill: bodyColor, // 直接fillを変更
+                    fill: bodyColor,
                   })
                 ),
               })}
@@ -214,42 +272,62 @@ export default function ImageSwap() {
 
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
-            key={selectedEyes.id}
-            className="absolute w-full h-full"
+            key={selectedLeftEye.id}
+            className="absolute w-full h-full "
             initial={{ opacity: 0, x: direction * 50 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: direction * -50 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <div style={{ marginBottom: "20px" }}>
-              {/* fillを動的に変更 */}
-              {React.cloneElement(selectedEyes.svg, {
-                children: React.Children.map(selectedEyes.svg.props.children, (child) =>
+            <div>
+              {React.cloneElement(selectedLeftEye.svg, {
+                children: React.Children.map(selectedLeftEye.svg.props.children, (child) =>
                   React.cloneElement(child, {
-                    fill: eyesColor, // 直接fillを変更
+                    fill: leftEyeColor, // 直接fillを変更
                   })
                 ),
               })}
             </div>
           </motion.div>
         </AnimatePresence>
+
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            key={selectedRightEye.id}
+            className="absolute w-full h-full "
+            initial={{ opacity: 0, x: direction * 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: direction * -50 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            <div>
+              {React.cloneElement(selectedRightEye.svg, {
+                children: React.Children.map(selectedRightEye.svg.props.children, (child) =>
+                  React.cloneElement(child, {
+                    fill: rightEyeColor, // 直接fillを変更
+                  })
+                ),
+              })}
+            </div>
+          </motion.div>
+        </AnimatePresence>
+
 
 
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
-            key={selectedIris.id}
+            key={selectedLeftIris.id}
             className="absolute w-full h-full"
             initial={{ opacity: 0, x: direction * 50 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: direction * -50 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <div style={{ marginBottom: "20px" }}>
-              {/* fillを動的に変更 */}
-              {React.cloneElement(selectedIris.svg, {
-                children: React.Children.map(selectedIris.svg.props.children, (child) =>
+            <div>
+              {React.cloneElement(selectedLeftIris.svg, {
+                children: React.Children.map(selectedLeftIris.svg.props.children, (child) =>
                   React.cloneElement(child, {
-                    fill: irisColor, // 直接fillを変更
+                    fill: leftIrisColor, // 直接fillを変更
                   })
                 ),
               })}
@@ -257,10 +335,28 @@ export default function ImageSwap() {
           </motion.div>
         </AnimatePresence>
 
-
-
-
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            key={selectedRightIris.id}
+            className="absolute w-full h-full"
+            initial={{ opacity: 0, x: direction * 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: direction * -50 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            <div>
+              {React.cloneElement(selectedRightIris.svg, {
+                children: React.Children.map(selectedRightIris.svg.props.children, (child) =>
+                  React.cloneElement(child, {
+                    fill: rightIrisColor, // 直接fillを変更
+                  })
+                ),
+              })}
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
+
 
 
       {/* 選択 */}
@@ -283,7 +379,7 @@ export default function ImageSwap() {
                 key={image.id}
                 onClick={() => handleShapeSelect(image, index)}
                 className={`relative flex-shrink-0 w-16 h-16 rounded border-2 transition-all duration-200 ${selectedShape.id === image.id
-                  ? "border-blue-500 scale-110 transform"
+                  ? "border-blue-500 scale-105"
                   : "border-gray-200 hover:border-gray-300"
                   }`}
                 aria-label={`画像${image.title}を選択`}
@@ -308,20 +404,19 @@ export default function ImageSwap() {
         <h3>アイカラーを選んでください</h3>
         <input
           type="color"
-          value={eyesColor} // 現在のカラー
-          onChange={handleEyesColorChange} // 色が変更されたときに呼ばれる
+          value={leftEyeColor} // 現在のカラー
+          onChange={handleLeftEyeColorChange} // 色が変更されたときに呼ばれる
         />
-
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center">
 
         <div className="flex space-x-2 overflow-x-auto py-2 px-1 max-w-full">
-          {eyesShapes.map((image, index) => (
+          {leftEyeShapes.map((image, index) => (
             <button
               key={image.id}
-              onClick={() => handleEyesSelect(image, index)}
-              className={`relative flex-shrink-0 w-16 h-16 rounded border-2 transition-all duration-200 ${selectedEyes.id === image.id
-                ? "border-blue-500 scale-110 transform"
+              onClick={() => handleLeftEyeSelect(image, index)}
+              className={`relative flex-shrink-0 w-16 h-16 rounded border-2 transition-all duration-200 ${selectedLeftEye.id === image.id
+                ? "border-blue-500 scale-105"
                 : "border-gray-200 hover:border-gray-300"
                 }`}
               aria-label={`画像${image.title}を選択`}
@@ -333,12 +428,8 @@ export default function ImageSwap() {
           ))}
         </div>
       </div>
-
       <div className="text-center mt-2">
-        <h2 className="text-lg font-medium">{selectedEyes.title}</h2>
-
-
-
+        <h2 className="text-lg font-medium">{selectedLeftEye.title}</h2>
       </div>
 
 
@@ -346,20 +437,19 @@ export default function ImageSwap() {
         <h3>アイカラーを選んでください</h3>
         <input
           type="color"
-          value={irisColor} // 現在のカラー
-          onChange={handleIrisColorChange} // 色が変更されたときに呼ばれる
+          value={rightEyeColor} // 現在のカラー
+          onChange={handleRightEyeColorChange} // 色が変更されたときに呼ばれる
         />
-
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center">
 
         <div className="flex space-x-2 overflow-x-auto py-2 px-1 max-w-full">
-          {irisShapes.map((image, index) => (
+          {rightEyeShapes.map((image, index) => (
             <button
               key={image.id}
-              onClick={() => handleIrisSelect(image, index)}
-              className={`relative flex-shrink-0 w-16 h-16 rounded border-2 transition-all duration-200 ${selectedIris.id === image.id
-                ? "border-blue-500 scale-110 transform"
+              onClick={() => handleRightEyeSelect(image, index)}
+              className={`relative flex-shrink-0 w-16 h-16 rounded border-2 transition-all duration-200 ${selectedRightEye.id === image.id
+                ? "border-blue-500 scale-105"
                 : "border-gray-200 hover:border-gray-300"
                 }`}
               aria-label={`画像${image.title}を選択`}
@@ -371,12 +461,76 @@ export default function ImageSwap() {
           ))}
         </div>
       </div>
-
       <div className="text-center mt-2">
-        <h2 className="text-lg font-medium">{selectedIris.title}</h2>
+        <h2 className="text-lg font-medium">{selectedRightEye.title}</h2>
+      </div>
 
 
 
+
+      <div>
+        <h3>アイカラーを選んでください</h3>
+        <input
+          type="color"
+          value={leftIrisColor} // 現在のカラー
+          onChange={handleLeftIrisColorChange} // 色が変更されたときに呼ばれる
+        />
+      </div>
+      <div className="flex justify-center items-center">
+
+        <div className="flex space-x-2 overflow-x-auto py-2 px-1 max-w-full">
+          {leftIrisShapes.map((image, index) => (
+            <button
+              key={image.id}
+              onClick={() => handleLeftIrisSelect(image, index)}
+              className={`relative flex-shrink-0 w-16 h-16 rounded border-2 transition-all duration-200 ${selectedLeftIris.id === image.id
+                ? "border-blue-500 scale-105"
+                : "border-gray-200 hover:border-gray-300"
+                }`}
+              aria-label={`画像${image.title}を選択`}
+            >
+              <div className="flex justify-center items-center w-full h-full">
+                {image.svg}
+              </div>
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="text-center mt-2">
+        <h2 className="text-lg font-medium">{selectedLeftIris.title}</h2>
+      </div>
+
+
+      <div>
+        <h3>アイカラーを選んでください</h3>
+        <input
+          type="color"
+          value={rightIrisColor} // 現在のカラー
+          onChange={handleRightIrisColorChange} // 色が変更されたときに呼ばれる
+        />
+      </div>
+      <div className="flex justify-center items-center">
+
+        <div className="flex space-x-2 overflow-x-auto py-2 px-1 max-w-full">
+          {rightIrisShapes.map((image, index) => (
+            <button
+              key={image.id}
+              onClick={() => handleRightIrisSelect(image, index)}
+              className={`relative flex-shrink-0 w-16 h-16 rounded border-2 transition-all duration-200 ${selectedRightIris.id === image.id
+                ? "border-blue-500 scale-105"
+                : "border-gray-200 hover:border-gray-300"
+                }`}
+              aria-label={`画像${image.title}を選択`}
+            >
+              <div className="flex justify-center items-center w-full h-full">
+                {image.svg}
+              </div>
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="text-center mt-2">
+        <h2 className="text-lg font-medium">{selectedRightIris.title}</h2>
       </div>
 
     </div>

@@ -73,18 +73,8 @@ const TabMenu: React.FC = () => {
 
 
 
-      {/* 背景 */}
-      {/* <svg
-        className=" absolute top-20"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 100 100"
-        width="430"
-        height="430"
-        preserveAspectRatio="none"
-      >
-        <rect x="0" y="0" width="100%" height="100%" fill={fillColor} />
-      </svg> */}
-      <div className="h-80"></div>
+
+
 
       <div className="absolute z-10 top-50">
 
