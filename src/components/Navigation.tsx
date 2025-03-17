@@ -56,8 +56,8 @@ const CharacterAdjuster: React.FC = () => {
             {/* 直接SVGを埋め込む */}
             <div className="relative">
                 <svg
-                    width={width}   {/* 動的に幅を変更 */}
-                    height={height} {/* 動的に高さを変更 */}
+                    width={width}
+                    height={height}
                     viewBox="0 0 390 598"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"

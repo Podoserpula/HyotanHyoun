@@ -2,8 +2,9 @@
 import React, { useState } from 'react';
 import Header from '@/components/Header';
 import { useRouter } from 'next/navigation';
-// import TabMenu from '../../components/TabMenu';
-import ImageSwap from '@/components/TabContents/ShapeType';
+import TabMenu from '../../components/TabMenu';
+import EyeType from '@/components/TabContents/EyeType';
+import ImageSwap from '@/components/ImageSwap';
 
 
 
@@ -62,8 +63,11 @@ export default function DressUpPage() {
             </svg> */}
           </div>
         </div>
+        <div>
 
-        <ImageSwap />
+          <ImageSwap />
+
+        </div>
 
 
 

@@ -149,46 +149,31 @@ const rightIrisShapes = [
 
 
 
-export default function ImageSwap() {
-  const [selectedShape, setSlectedShape] = useState(bodyShapes[0]);
+export default function ImageSwap2() {
   const [direction, setDirection] = useState(0);
 
 
+  //　体型
+  const [selectedBody, setSlectedBody] = useState(bodyShapes[0]);
+  const [bodyColor, setBodyColor] = useState("#FAFAFA");
 
-  const [selectedLeftEye, setSlectedLeftEye] = useState(leftEyeShapes[0]);
-  const [selectedRightEye, setSlectedRightEye] = useState(rightEyeShapes[0]);
-
-
-  const [selectedLeftIris, setSlectedLeftIris] = useState(leftIrisShapes[0]);
-  const [selectedRightIris, setSlectedRightIris] = useState(rightIrisShapes[0]);
-
-
-
-  const [bodyColor, setBodyColor] = useState("#FAFAFA"); //　体型の色
-
-
-
-  const [leftEyeColor, setLeftEyeColor] = useState("#FAFAFA"); // 白目部分の色
-  const [rightEyeColor, setRightEyeColor] = useState("#FAFAFA"); // 白目部分の色
-
-
-
-  const [leftIrisColor, setLeftIrisColor] = useState("#222222"); // 目の色
-  const [rightIrisColor, setRightIrisColor] = useState("#222222"); // 目の色
-
-
-
-
-
-  const handleShapeSelect = (image: typeof bodyShapes[0], index: number) => {
-    const currentIndex = bodyShapes.findIndex((img) => img.id === selectedShape.id);
+  const handleBodySelect = (image: typeof bodyShapes[0], index: number) => {
+    const currentIndex = bodyShapes.findIndex((img) => img.id === selectedBody.id);
     setDirection(index > currentIndex ? 1 : -1);
-    setSlectedShape(image);
+    setSlectedBody(image);
+  };
+
+  const handleBodyColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setBodyColor(event.target.value);
   };
 
 
 
 
+
+  // 左目の輪郭
+  const [selectedLeftEye, setSlectedLeftEye] = useState(leftEyeShapes[0]);
+  const [leftEyeColor, setLeftEyeColor] = useState("#FAFAFA");
 
   const handleLeftEyeSelect = (image: typeof leftEyeShapes[0], index: number) => {
     const currentIndex = leftEyeShapes.findIndex((img) => img.id === selectedLeftEye.id);
@@ -196,49 +181,87 @@ export default function ImageSwap() {
     setSlectedLeftEye(image);
   }
 
+  const handleLeftEyeColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setLeftEyeColor(event.target.value);
+  }
+
+
+
+
+  // 右目の輪郭
+  const [selectedRightEye, setSlectedRightEye] = useState(rightEyeShapes[0]);
+  const [rightEyeColor, setRightEyeColor] = useState("#FAFAFA");
+
   const handleRightEyeSelect = (image: typeof rightEyeShapes[0], index: number) => {
     const currentIndex = rightEyeShapes.findIndex((img) => img.id === selectedRightEye.id);
     setDirection(index > currentIndex ? 1 : -1);
     setSlectedRightEye(image);
   }
 
-
-
-
-
-  const handleLeftIrisSelect = (image: typeof leftIrisShapes[0], index: number) => {
-    const currentIndex = leftIrisShapes.findIndex((img) => img.id === selectedLeftIris.id);
-    setDirection(index > currentIndex ? 1 : -1);
-    setSlectedLeftIris(image);
-  }
-
-  const handleRightIrisSelect = (image: typeof rightIrisShapes[0], index: number) => {
-    const currentIndex = rightIrisShapes.findIndex((img) => img.id === selectedRightIris.id);
-    setDirection(index > currentIndex ? 1 : -1);
-    setSlectedRightIris(image);
-  }
-
-
-
-  const handleBodyColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setBodyColor(event.target.value); // 色を更新
-  };
-
-  const handleLeftEyeColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setLeftEyeColor(event.target.value);
-  }
   const handleRightEyeColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setRightEyeColor(event.target.value);
   }
 
 
 
+
+
+  // 左目の瞳孔
+  const [selectedLeftIris, setSelectedLeftIris] = useState(leftIrisShapes[0]);
+  const [leftIrisColor, setLeftIrisColor] = useState("#222222");
+  const [leftIrisSize, setLeftIrisSize] = useState(6.5); // デフォルトのサイズ
+  const [leftIrisHeight, setLeftIrisHeight] = useState(1); // 高さのデフォルト値
+  const [leftIrisWidth, setLeftIrisWidth] = useState(1);  // 幅のデフォルト値
+
+  const handleLeftIrisSelect = (image: typeof leftIrisShapes[0], index: number) => {
+    const currentIndex = leftIrisShapes.findIndex((img) => img.id === selectedLeftIris.id);
+    setDirection(index > currentIndex ? 1 : -1);
+    setSelectedLeftIris(image);
+  }
+
   const handleLeftIrisColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setLeftIrisColor(event.target.value);
   }
+
+  // 虹彩のサイズ変更
+  const handleLeftIrisSizeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setLeftIrisSize(parseFloat(event.target.value)); // サイズを変更
+  };
+
+  // 虹彩の高さ変更
+  const handleLeftIrisHeightChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setLeftIrisHeight(parseFloat(event.target.value));
+  };
+
+  // 虹彩の幅変更
+  const handleLeftIrisWidthChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setLeftIrisWidth(parseFloat(event.target.value));
+  };
+
+
+  const [translateX, setTranslateX] = useState(0);
+  const [translateY, setTranslateY] = useState(0);
+
+
+  // 右目の瞳孔
+  const [selectedRightIris, setSelectedRightIris] = useState(rightIrisShapes[0]);
+  const [rightIrisColor, setRightIrisColor] = useState("#222222");
+  const [rightIrisSize, setRightIrisSize] = useState(6.5); // デフォルトのサイズ
+
+  const handleRightIrisSelect = (image: typeof rightIrisShapes[0], index: number) => {
+    const currentIndex = rightIrisShapes.findIndex((img) => img.id === selectedRightIris.id);
+    setDirection(index > currentIndex ? 1 : -1);
+    setSelectedRightIris(image);
+  }
+
   const handleRightIrisColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setRightIrisColor(event.target.value);
   }
+
+  // 虹彩のサイズ変更
+  const handleRightIrisSizeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setRightIrisSize(parseFloat(event.target.value)); // サイズを変更
+  };
 
 
   return (
@@ -250,7 +273,7 @@ export default function ImageSwap() {
       <div className="relative w-full aspect-square bg-white rounded-lg border border-gray-200 overflow-hidden ">
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
-            key={selectedShape.id}
+            key={selectedBody.id}
             className="absolute w-full h-full"
             initial={{ opacity: 0, x: direction * 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -258,8 +281,8 @@ export default function ImageSwap() {
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             <div >
-              {React.cloneElement(selectedShape.svg, {
-                children: React.Children.map(selectedShape.svg.props.children, (child) =>
+              {React.cloneElement(selectedBody.svg, {
+                children: React.Children.map(selectedBody.svg.props.children, (child) =>
                   React.cloneElement(child, {
                     fill: bodyColor,
                   })
@@ -283,7 +306,7 @@ export default function ImageSwap() {
               {React.cloneElement(selectedLeftEye.svg, {
                 children: React.Children.map(selectedLeftEye.svg.props.children, (child) =>
                   React.cloneElement(child, {
-                    fill: leftEyeColor, // 直接fillを変更
+                    fill: leftEyeColor,
                   })
                 ),
               })}
@@ -304,7 +327,7 @@ export default function ImageSwap() {
               {React.cloneElement(selectedRightEye.svg, {
                 children: React.Children.map(selectedRightEye.svg.props.children, (child) =>
                   React.cloneElement(child, {
-                    fill: rightEyeColor, // 直接fillを変更
+                    fill: rightEyeColor,
                   })
                 ),
               })}
@@ -316,6 +339,7 @@ export default function ImageSwap() {
 
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
+
             key={selectedLeftIris.id}
             className="absolute w-full h-full"
             initial={{ opacity: 0, x: direction * 50 }}
@@ -327,7 +351,8 @@ export default function ImageSwap() {
               {React.cloneElement(selectedLeftIris.svg, {
                 children: React.Children.map(selectedLeftIris.svg.props.children, (child) =>
                   React.cloneElement(child, {
-                    fill: leftIrisColor, // 直接fillを変更
+                    fill: leftIrisColor,
+                    r: leftIrisSize,
                   })
                 ),
               })}
@@ -348,7 +373,8 @@ export default function ImageSwap() {
               {React.cloneElement(selectedRightIris.svg, {
                 children: React.Children.map(selectedRightIris.svg.props.children, (child) =>
                   React.cloneElement(child, {
-                    fill: rightIrisColor, // 直接fillを変更
+                    fill: rightIrisColor,
+                    r: rightIrisSize,
                   })
                 ),
               })}
@@ -366,8 +392,8 @@ export default function ImageSwap() {
           <h3>ボディカラーを選んでください</h3>
           <input
             type="color"
-            value={bodyColor} // 現在のカラー
-            onChange={handleBodyColorChange} // 色が変更されたときに呼ばれる
+            value={bodyColor}
+            onChange={handleBodyColorChange}
           />
 
         </div>
@@ -377,8 +403,8 @@ export default function ImageSwap() {
             {bodyShapes.map((image, index) => (
               <button
                 key={image.id}
-                onClick={() => handleShapeSelect(image, index)}
-                className={`relative flex-shrink-0 w-16 h-16 rounded border-2 transition-all duration-200 ${selectedShape.id === image.id
+                onClick={() => handleBodySelect(image, index)}
+                className={`relative flex-shrink-0 w-16 h-16 rounded border-2 transition-all duration-200 ${selectedBody.id === image.id
                   ? "border-blue-500 scale-105"
                   : "border-gray-200 hover:border-gray-300"
                   }`}
@@ -395,7 +421,7 @@ export default function ImageSwap() {
       </div>
 
       <div className="text-center mt-2">
-        <h2 className="text-lg font-medium">{selectedShape.title}</h2>
+        <h2 className="text-lg font-medium">{selectedBody.title}</h2>
       </div>
 
 
@@ -404,8 +430,8 @@ export default function ImageSwap() {
         <h3>アイカラーを選んでください</h3>
         <input
           type="color"
-          value={leftEyeColor} // 現在のカラー
-          onChange={handleLeftEyeColorChange} // 色が変更されたときに呼ばれる
+          value={leftEyeColor}
+          onChange={handleLeftEyeColorChange}
         />
       </div>
       <div className="flex justify-center">
@@ -437,8 +463,8 @@ export default function ImageSwap() {
         <h3>アイカラーを選んでください</h3>
         <input
           type="color"
-          value={rightEyeColor} // 現在のカラー
-          onChange={handleRightEyeColorChange} // 色が変更されたときに呼ばれる
+          value={rightEyeColor}
+          onChange={handleRightEyeColorChange}
         />
       </div>
       <div className="flex justify-center">
@@ -472,9 +498,24 @@ export default function ImageSwap() {
         <h3>アイカラーを選んでください</h3>
         <input
           type="color"
-          value={leftIrisColor} // 現在のカラー
-          onChange={handleLeftIrisColorChange} // 色が変更されたときに呼ばれる
+          value={leftIrisColor}
+          onChange={handleLeftIrisColorChange}
         />
+      </div>
+
+      {/* 虹彩の大きさ */}
+      <div>
+        <h3>虹彩の大きさを変更</h3>
+        <input
+          type="range"
+          min="0"
+          max="9"
+          value={leftIrisSize}
+          step="0.1"
+          onChange={handleLeftIrisSizeChange}
+          className="w-full"
+        />
+
       </div>
       <div className="flex justify-center items-center">
 
@@ -505,9 +546,23 @@ export default function ImageSwap() {
         <h3>アイカラーを選んでください</h3>
         <input
           type="color"
-          value={rightIrisColor} // 現在のカラー
-          onChange={handleRightIrisColorChange} // 色が変更されたときに呼ばれる
+          value={rightIrisColor}
+          onChange={handleRightIrisColorChange}
         />
+      </div>
+      {/* 虹彩の大きさ */}
+      <div >
+        <h3>虹彩の大きさを変更</h3>
+        <input
+          type="range"
+          min="0"
+          max="9"
+          value={rightIrisSize}
+          step="0.1"
+          onChange={handleRightIrisSizeChange}
+          className="w-full"
+        />
+        <div className="text-center">{`サイズ: ${leftIrisSize.toFixed(1)}`}</div>
       </div>
       <div className="flex justify-center items-center">
 
