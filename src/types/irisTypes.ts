@@ -1,4 +1,3 @@
-// irisTypes.ts
 
 import { JSX } from "react";
 

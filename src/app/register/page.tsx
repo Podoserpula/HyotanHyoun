@@ -27,7 +27,11 @@ export default function page() {
 
 	return (
 		<>
+<<<<<<< HEAD
 			<Header title="新規会員登録" />
+=======
+			<Header title="サインアップ" />
+>>>>>>> 64c461e (アクセサリー追加)
 			<main>
 				<div className="flex justify-center min-h-screen bg-gray-100">
 					<div className="mt-10">
@@ -96,7 +100,11 @@ export default function page() {
 							{/* 登録ボタン */}
 							<button
 								type="submit"
+<<<<<<< HEAD
 								className="w-full py-2 px-4 bg-gray-600 text-white rounded-md hover:bg-blue-700"
+=======
+								className="w-full py-2 px-4 bg-gray-600 text-colorWhite rounded-md hover:bg-blue-700"
+>>>>>>> 64c461e (アクセサリー追加)
 							>
 								登録
 							</button>

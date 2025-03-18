@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // EyeCustomizer.tsx
+=======
+>>>>>>> 64c461e (アクセサリー追加)
 "use client";
 import React, { JSX } from "react";
 
@@ -15,7 +18,10 @@ interface EyesCustomizerProps {
 	onIrisColorChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 	irisSize: number;
 	onIrisSizeChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+<<<<<<< HEAD
 	irisSizeLabel: string;
+=======
+>>>>>>> 64c461e (アクセサリー追加)
 }
 
 const EyeCustomizer: React.FC<EyesCustomizerProps> = ({
@@ -31,12 +37,19 @@ const EyeCustomizer: React.FC<EyesCustomizerProps> = ({
 	onIrisColorChange,
 	irisSize,
 	onIrisSizeChange,
+<<<<<<< HEAD
 	irisSizeLabel,
+=======
+>>>>>>> 64c461e (アクセサリー追加)
 }) => {
 	return (
 		<div>
 			<div>
+<<<<<<< HEAD
 				<h3>アイカラーを選んでください</h3>
+=======
+				<h3>白目部分の色を選んでください</h3>
+>>>>>>> 64c461e (アクセサリー追加)
 				<input type="color" value={eyeColor} onChange={onEyeColorChange} />
 			</div>
 			<div className="flex justify-center">
@@ -62,7 +75,11 @@ const EyeCustomizer: React.FC<EyesCustomizerProps> = ({
 				<h2 className="text-lg font-medium">{selectedEye.title}</h2>
 			</div>
 
+<<<<<<< HEAD
 			<div>
+=======
+			<div className="mt-10">
+>>>>>>> 64c461e (アクセサリー追加)
 				<h3>虹彩の色を選んでください</h3>
 				<input type="color" value={irisColor} onChange={onIrisColorChange} />
 			</div>
@@ -77,7 +94,11 @@ const EyeCustomizer: React.FC<EyesCustomizerProps> = ({
 					onChange={onIrisSizeChange}
 					className="w-full"
 				/>
+<<<<<<< HEAD
 				<div className="text-center">{irisSizeLabel}</div>
+=======
+
+>>>>>>> 64c461e (アクセサリー追加)
 			</div>
 			<div className="flex justify-center items-center">
 				<div className="flex space-x-2 overflow-x-auto py-2 px-1 max-w-full">

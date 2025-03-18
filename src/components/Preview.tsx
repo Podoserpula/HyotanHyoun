@@ -15,6 +15,8 @@ interface PreviewProps {
 	selectedRightIris: { id: number; title: string; svg: JSX.Element };
 	rightIrisColor: string;
 	rightIrisSize: number;
+	selectedAccessary: { id: number; title: string; svg: JSX.Element };
+	accessaryColor: string;
 	direction: number;
 }
 
@@ -31,6 +33,8 @@ const Preview: React.FC<PreviewProps> = ({
 	selectedRightIris,
 	rightIrisColor,
 	rightIrisSize,
+	selectedAccessary,
+	accessaryColor,
 	direction,
 }) => {
 	return (
@@ -135,6 +139,28 @@ const Preview: React.FC<PreviewProps> = ({
 								React.cloneElement(child, {
 									fill: rightIrisColor,
 									r: rightIrisSize,
+								})
+							),
+						})}
+					</div>
+				</motion.div>
+			</AnimatePresence>
+
+
+			<AnimatePresence mode="wait" initial={false}>
+				<motion.div
+					key={selectedAccessary.id}
+					className="absolute w-full h-full"
+					initial={{ opacity: 0, x: direction * 50 }}
+					animate={{ opacity: 1, x: 0 }}
+					exit={{ opacity: 0, x: direction * -50 }}
+					transition={{ duration: 0.3, ease: 'easeInOut' }}
+				>
+					<div>
+						{React.cloneElement(selectedAccessary.svg, {
+							children: React.Children.map(selectedAccessary.svg.props.children, (child) =>
+								React.cloneElement(child, {
+									fill: accessaryColor,
 								})
 							),
 						})}
