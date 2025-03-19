@@ -1,6 +1,6 @@
 // BodySelector.tsx
 "use client";
-import React, { JSX, useState } from "react";
+import React, { JSX } from "react";
 
 interface BodySelectorProps {
 	onBodySelect: (
