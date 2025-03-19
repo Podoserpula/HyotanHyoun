@@ -2,11 +2,6 @@
 import React, { useState } from 'react';
 import Header from '@/components/Header';
 import { useRouter } from 'next/navigation';
-<<<<<<< HEAD
-import TabMenu from '../../components/TabMenu';
-import EyeType from '@/components/TabContents/EyeType';
-=======
->>>>>>> 64c461e (アクセサリー追加)
 import ImageSwap from '@/components/ImageSwap';
 
 
@@ -20,14 +15,7 @@ export default function DressUpPage() {
 
 
 
-<<<<<<< HEAD
-  // const ShapeChanger = () => {
-  //   const [heightFactor, setHeightFactor] = useState(1);
-  //   const [widthFactor, setWidthFactor] = useState(1);
-  // };
 
-=======
->>>>>>> 64c461e (アクセサリー追加)
   const router = useRouter();
 
 
@@ -59,11 +47,8 @@ export default function DressUpPage() {
     <div className="flex flex-col items-center ">
       {/* ヘッダー */}
       <Header title="きせかえ" />
-<<<<<<< HEAD
-      <main className="w-full max-w-screen-md">
-=======
+
       <main className="w-full max-w-screen-sm">
->>>>>>> 64c461e (アクセサリー追加)
         <div className="relative">
           <div className="absolute z-40  top-5">
             {/* 画面説明のアイコン */}
@@ -87,11 +72,10 @@ export default function DressUpPage() {
           {/* 着せ替え完了ボタン */}
           <button
             onClick={handleCompleteClick}
-<<<<<<< HEAD
-            className="px-6 py-3 bg-white-500 text-gray rounded-lg border-2 border-gray-700 text-xl"
-=======
+
+
+
             className="px-6 py-3 bg-white-500 text-colorBlack rounded-lg border-2 border-gray-700 text-xl"
->>>>>>> 64c461e (アクセサリー追加)
           >
             着せかえ完了
           </button>
@@ -101,31 +85,20 @@ export default function DressUpPage() {
         {isModalOpen && (
           <div className="mt-4 text-red-500 text-lg">
             <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center z-50">
-<<<<<<< HEAD
-              <div className="bg-white p-6 rounded-lg w-80">
-=======
               <div className="bg-colorWhite p-6 rounded-lg w-80">
->>>>>>> 64c461e (アクセサリー追加)
                 <h2 className="text-2xl font-bold mb-4">ゲストプレイではデータが保存できません！</h2>
                 <p className="mb-4">新規登録をして、着せかえ内容を保存しましょう。</p>
                 <div className="flex justify-between">
                   <button
                     onClick={() => router.push('/register')}
-<<<<<<< HEAD
-                    className="mt-2 px-4 py-2 bg-green-500 text-white rounded"
-=======
+
                     className="mt-2 px-4 py-2 bg-green-500 text-colorWhite rounded"
->>>>>>> 64c461e (アクセサリー追加)
                   >
                     新規登録
                   </button>
                   <button
                     onClick={closeModal}
-<<<<<<< HEAD
-                    className="px-4 py-2 bg-gray-300 text-gray-700 rounded"
-=======
                     className="px-4 py-2 bg-gray-300 text-colorBlack rounded"
->>>>>>> 64c461e (アクセサリー追加)
                   >
                     閉じる
                   </button>
