@@ -58,6 +58,7 @@ const EyeCustomizer: React.FC<EyesCustomizerProps> = ({
 			<div className="text-center mt-2">
 				<h2 className="text-lg font-medium">{selectedEye.title}</h2>
 			</div>
+			<div>
 				<h3>虹彩の色を選んでください</h3>
 				<input type="color" value={irisColor} onChange={onIrisColorChange} />
 			</div>
