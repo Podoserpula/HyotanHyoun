@@ -10,8 +10,8 @@ import ImageSwap from '@/components/ImageSwap';
 
 
 export default function DressUpPage() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // ログイン状態を管理
-  const [isModalOpen, setIsModalOpen] = useState(false); // モーダルの開閉管理
+  // const [isLoggedIn, setIsLoggedIn] = useState(false); 
+  const [isModalOpen, setIsModalOpen] = useState(false); 
 
 
 
