@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-// BodyCustomizer.tsx
-=======
->>>>>>> 64c461e (アクセサリー追加)
 "use client";
 import React, { JSX } from "react";
 
