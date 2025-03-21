@@ -209,7 +209,7 @@ const accessaries = [
 
 
 
-export default function ImageSwapu() {
+export default function ImageSwap() {
 	const [direction, setDirection] = useState(0);
 	const [activeTab, setActiveTab] = useState('body');
 
