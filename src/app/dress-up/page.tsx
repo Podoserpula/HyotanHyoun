@@ -10,7 +10,7 @@ import ImageSwap from '@/components/ImageSwap';
 
 
 export default function DressUpPage() {
-  // const [isLoggedIn, setIsLoggedIn] = useState(false); 
+  const [isLoggedIn, setIsLoggedIn] = useState(false); 
   const [isModalOpen, setIsModalOpen] = useState(false); 
 
 
@@ -31,13 +31,13 @@ export default function DressUpPage() {
   };
 
   // ログイン
-  // const handleCompleteClick = () => {
-  //   if (isLoggedIn) {
-  //     router.push('/dress-up-complete');
-  //   } else {
-  //     openModal();
-  //   }
-  // };
+  const handleCompleteClick = () => {
+    if (isLoggedIn) {
+      router.push('/dress-up-complete');
+    } else {
+      openModal();
+    }
+  };
 
 
 
