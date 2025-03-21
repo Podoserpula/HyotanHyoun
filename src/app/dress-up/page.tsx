@@ -31,13 +31,13 @@ export default function DressUpPage() {
   };
 
   // ログイン
-  const handleCompleteClick = () => {
-    if (isLoggedIn) {
-      router.push('/dress-up-complete');
-    } else {
-      openModal();
-    }
-  };
+  // const handleCompleteClick = () => {
+  //   if (isLoggedIn) {
+  //     router.push('/dress-up-complete');
+  //   } else {
+  //     openModal();
+  //   }
+  // };
 
 
 
